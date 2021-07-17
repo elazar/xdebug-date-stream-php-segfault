@@ -1,0 +1,46 @@
+#0  0x0000555555665dc7 in fetch_timezone_offset (tz=tz@entry=0x7ffff7278280, ts=ts@entry=1626524012, 
+    transition_time=transition_time@entry=0x7fffffffa6f0) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/ext/date/lib/parse_tz.c:1153
+#1  0x0000555555667e68 in timelib_get_time_zone_info (ts=1626524012, tz=0x7ffff7278280)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/ext/date/lib/parse_tz.c:1206
+#2  0x0000555555640f80 in date_format (format=format@entry=0x555555a004d2 "Y-m-d H:i:s.u", format_len=format_len@entry=13, t=0x7ffff7279100, 
+    localtime=localtime@entry=1) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/ext/date/php_date.c:650
+#3  0x0000555555641c72 in date_object_get_properties_for (purpose=<optimized out>, object=0x7ffff726a508)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/ext/date/php_date.c:1818
+#4  date_object_get_properties_for (object=0x7ffff726a508, purpose=<optimized out>)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/ext/date/php_date.c:1794
+#5  0x00007ffff742cc8f in xdebug_objdebug_pp () from /usr/lib64/php/modules/xdebug.so
+#6  0x00007ffff742f258 in xdebug_var_export_line () from /usr/lib64/php/modules/xdebug.so
+#7  0x00007ffff742f6dc in xdebug_var_export_line () from /usr/lib64/php/modules/xdebug.so
+#8  0x00007ffff742fc10 in xdebug_get_zval_value_line () from /usr/lib64/php/modules/xdebug.so
+#9  0x00007ffff7447d5e in xdebug_trace_textual_function_entry () from /usr/lib64/php/modules/xdebug.so
+#10 0x00007ffff742755c in xdebug_execute_ex () from /usr/lib64/php/modules/xdebug.so
+#11 0x000055555584b1ef in ZEND_DO_FCALL_SPEC_RETVAL_UNUSED_HANDLER () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:1722
+#12 execute_ex (ex=0x7ffff7278280) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:54556
+#13 0x00007ffff74273f6 in xdebug_execute_ex () from /usr/lib64/php/modules/xdebug.so
+#14 0x000055555584a351 in ZEND_DO_FCALL_SPEC_RETVAL_USED_HANDLER () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:1830
+#15 execute_ex (ex=0x7ffff7278280) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:54560
+#16 0x00007ffff74273f6 in xdebug_execute_ex () from /usr/lib64/php/modules/xdebug.so
+#17 0x000055555584b1ef in ZEND_DO_FCALL_SPEC_RETVAL_UNUSED_HANDLER () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:1722
+#18 execute_ex (ex=0x7ffff7278280) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:54556
+#19 0x00007ffff74273f6 in xdebug_execute_ex () from /usr/lib64/php/modules/xdebug.so
+#20 0x000055555584b1ef in ZEND_DO_FCALL_SPEC_RETVAL_UNUSED_HANDLER () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:1722
+#21 execute_ex (ex=0x7ffff7278280) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_vm_execute.h:54556
+#22 0x00007ffff74273f6 in xdebug_execute_ex () from /usr/lib64/php/modules/xdebug.so
+#23 0x00005555557d35f0 in zend_call_function (fci=<optimized out>, fci_cache=<optimized out>)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_execute_API.c:895
+#24 0x00005555557d38f9 in _call_user_function_impl (object=<optimized out>, function_name=function_name@entry=0x7fffffffb0f0, 
+    retval_ptr=retval_ptr@entry=0x7fffffffb100, param_count=param_count@entry=0, params=params@entry=0x0, named_params=named_params@entry=0x0)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_execute_API.c:659
+#25 0x0000555555798666 in php_userstreamop_closedir (stream=<optimized out>, close_handle=<optimized out>)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_types.h:553
+#26 0x00005555557912e4 in _php_stream_free (stream=<optimized out>, close_options=close_options@entry=11)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/main/streams/streams.c:475
+#27 0x0000555555791586 in stream_resource_regular_dtor (rsrc=<optimized out>)
+    at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/main/streams/streams.c:1662
+#28 0x00005555557f4be5 in zend_resource_dtor (res=<optimized out>) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_list.c:72
+#29 0x00005555557f5199 in zend_close_rsrc_list (ht=<optimized out>) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_list.c:220
+#30 0x00005555557d1dc2 in shutdown_executor () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend_execute_API.c:272
+#31 0x00005555557e11f8 in zend_deactivate () at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/Zend/zend.c:1225
+#32 0x000055555577b031 in php_request_shutdown (dummy=<optimized out>) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/main/main.c:1805
+#33 0x000055555587102e in do_cli (argc=2, argv=0x555555e222e0) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/sapi/cli/php_cli.c:1109
+#34 0x000055555563a6ce in main (argc=2, argv=0x555555e222e0) at /usr/src/debug/php-8.0.6-1.fc33.remi.x86_64/sapi/cli/php_cli.c:1335
