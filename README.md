@@ -1,5 +1,7 @@
 The code in this repository causes a segmentation fault when run with PHP 8.0.6 on Fedora 33.
 
+This issue has been [reported to the Xdebug project](https://bugs.xdebug.org/view.php?id=1995) for further investigation.
+
 ## Installation
 
 1. Install dependencies.
